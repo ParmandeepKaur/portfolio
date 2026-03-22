@@ -15,7 +15,7 @@ const cpStats = [
     platform: 'CodeChef',
     stat: '1495',
     label: 'Peak Rating',
-    sub: '3 Rated Contests · Global Rank 1495',
+    sub: '3 Rated Contests · Global Rank 27868',
     color: 'amber',
   },
   // {

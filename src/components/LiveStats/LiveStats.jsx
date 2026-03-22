@@ -230,7 +230,7 @@ export default function LiveStats() {
 
             <div className="ls-stats-row">
               <div className="ls-stat">
-                <div className="ls-stat-val cc-color">1267</div>
+                <div className="ls-stat-val cc-color">27868</div>
                 <div className="ls-stat-key">Global Rank</div>
               </div>
               <div className="ls-stat">
