@@ -1,0 +1,78 @@
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cert-blue:hover   { border-color: rgba(79,142,247,0.3) !important; }
+.cert-violet:hover { border-color: rgba(167,139,250,0.3) !important; }
+.cert-amber:hover  { border-color: rgba(245,158,11,0.3) !important; }
+
+.cert-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.cert-icon-box {
+  width: 52px; height: 52px;
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+}
+.cert-icon-blue   { background: var(--accent-dim);  border-color: rgba(79,142,247,0.2); }
+.cert-icon-violet { background: var(--violet-dim);  border-color: rgba(167,139,250,0.2); }
+.cert-icon-amber  { background: var(--amber-dim);   border-color: rgba(245,158,11,0.2); }
+
+.cert-year-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text3);
+}
+.cert-year-blue   { color: var(--accent); background: var(--accent-dim); border-color: rgba(79,142,247,0.2); }
+.cert-year-violet { color: var(--violet); background: var(--violet-dim); border-color: rgba(167,139,250,0.2); }
+.cert-year-amber  { color: var(--amber);  background: var(--amber-dim);  border-color: rgba(245,158,11,0.2); }
+
+.cert-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+.cert-issuer {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text3);
+  margin-bottom: 1rem;
+}
+.cert-desc {
+  font-size: 0.83rem;
+  color: var(--text2);
+  line-height: 1.7;
+  flex: 1;
+}
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.cert-link:hover { opacity: 0.75; }

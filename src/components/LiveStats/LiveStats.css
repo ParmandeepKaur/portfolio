@@ -1,0 +1,225 @@
+.live-stats-section {
+  background: linear-gradient(180deg, transparent, rgba(79,142,247,0.025) 50%, transparent);
+}
+
+/* ── Grid ── */
+.ls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* ── Card base ── */
+.ls-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.ls-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Platform accent borders on hover */
+.lc-card:hover { border-color: rgba(255,161,22,0.35) !important; }
+.gh-card:hover { border-color: rgba(167,139,250,0.35) !important; }
+.cc-card:hover { border-color: rgba(79,142,247,0.35) !important; }
+
+/* ── Card header ── */
+.ls-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ls-platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid;
+}
+.lc-badge { color: #ffa116; background: rgba(255,161,22,0.1); border-color: rgba(255,161,22,0.25); }
+.gh-badge { color: var(--violet); background: var(--violet-dim); border-color: rgba(167,139,250,0.25); }
+.cc-badge { color: var(--accent); background: var(--accent-dim); border-color: rgba(79,142,247,0.25); }
+
+.ls-ext-icon {
+  color: var(--text3);
+  transition: color 0.2s;
+}
+.ls-card:hover .ls-ext-icon { color: var(--text2); }
+
+/* ── Big number ── */
+.ls-big-num {
+  font-family: var(--font-mono);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.ls-big-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text3);
+  font-family: var(--font-mono);
+}
+
+/* Platform colors */
+.lc-color { color: #ffa116; }
+.gh-color { color: var(--violet); }
+.cc-color { color: var(--accent); }
+
+/* ── Stats row ── */
+.ls-stats-row {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.ls-stat { min-width: 60px; }
+.ls-stat-val {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.ls-stat-key {
+  font-size: 0.68rem;
+  color: var(--text3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+/* ── Difficulty bar ── */
+.diff-bar-wrap { margin-top: auto; }
+.diff-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--surface2);
+  gap: 2px;
+  margin-bottom: 0.6rem;
+}
+.diff-seg {
+  border-radius: 999px;
+  transition: width 0.8s ease;
+}
+.diff-easy   { background: #00b8a3; }
+.diff-medium { background: #ffa116; }
+.diff-hard   { background: #ef4743; }
+
+.diff-legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.diff-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  color: var(--text3);
+}
+.dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot-easy   { background: #00b8a3; }
+.dot-medium { background: #ffa116; }
+.dot-hard   { background: #ef4743; }
+
+/* ── GitHub langs ── */
+.gh-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+.gh-lang-tag {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  background: var(--violet-dim);
+  border: 1px solid rgba(167,139,250,0.2);
+  color: var(--violet);
+}
+
+/* ── CodeChef note ── */
+.cc-contests-note {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text3);
+  margin-top: auto;
+}
+
+/* ── Notice (soft, not alarming) ── */
+.stats-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.9rem;
+  font-size: 0.72rem;
+  color: var(--text3);
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  width: fit-content;
+}
+
+/* ── Skeleton ── */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--surface2) 25%,
+    var(--surface)  50%,
+    var(--surface2) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Last updated ── */
+.ls-updated {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text3);
+  margin-top: 1.25rem;
+  justify-content: flex-end;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .ls-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .ls-grid { grid-template-columns: 1fr; }
+}

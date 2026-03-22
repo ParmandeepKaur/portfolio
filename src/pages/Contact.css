@@ -1,0 +1,180 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Info column */
+.contact-intro-card {
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.contact-intro-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.contact-avatar {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.contact-intro-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.contact-intro-role {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text3);
+}
+.contact-intro-text {
+  font-size: 0.83rem;
+  color: var(--text2);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+.contact-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: #34d399;
+}
+.live-dot-sm {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  animation: blink 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.contact-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.cl-blue:hover   { border-color: rgba(79,142,247,0.3); transform: translateX(3px); }
+.cl-violet:hover { border-color: rgba(167,139,250,0.3); transform: translateX(3px); }
+.cl-amber:hover  { border-color: rgba(245,158,11,0.3); transform: translateX(3px); }
+
+.cl-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cl-icon-blue   { background: var(--accent-dim); color: var(--accent); }
+.cl-icon-violet { background: var(--violet-dim); color: var(--violet); }
+.cl-icon-amber  { background: var(--amber-dim);  color: var(--amber); }
+
+.cl-label {
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text3);
+  margin-bottom: 0.15rem;
+}
+.cl-value {
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Form */
+.contact-form {
+  padding: 2rem;
+}
+.form-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+.form-label {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text3);
+}
+.form-input, .form-textarea {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--text3); }
+.form-textarea { min-height: 130px; resize: vertical; }
+
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  margin-top: 0.25rem;
+  transition: all 0.25s;
+}
+.form-submit.sent {
+  background: #059669;
+  box-shadow: 0 6px 20px rgba(5,150,105,0.3);
+}
+.form-note {
+  font-size: 0.72rem;
+  color: var(--text3);
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+.form-note a { color: var(--accent); text-decoration: none; }
+.form-note a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,44 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+.skill-group {
+  padding: 1.75rem;
+}
+.sk-blue:hover  { border-color: rgba(79,142,247,0.3) !important; }
+.sk-violet:hover { border-color: rgba(167,139,250,0.3) !important; }
+.sk-amber:hover  { border-color: rgba(245,158,11,0.3) !important; }
+
+.sg-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.sg-icon { font-size: 1.3rem; }
+.sg-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text2);
+}
+.sg-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.sg-pill {
+  font-size: 0.72rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text2);
+  transition: all 0.15s;
+}
+.sg-pill-blue:hover   { color: var(--accent); border-color: rgba(79,142,247,0.4); background: var(--accent-dim); }
+.sg-pill-violet:hover { color: var(--violet); border-color: rgba(167,139,250,0.4); background: var(--violet-dim); }
+.sg-pill-amber:hover  { color: var(--amber);  border-color: rgba(245,158,11,0.4);  background: var(--amber-dim); }
