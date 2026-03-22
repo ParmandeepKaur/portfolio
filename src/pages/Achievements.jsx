@@ -18,13 +18,13 @@ const cpStats = [
     sub: '3 Rated Contests · Global Rank 1495',
     color: 'amber',
   },
-  {
-    platform: 'Problems',
-    stat: '750+',
-    label: 'DSA Solved',
-    sub: 'Arrays · DP · Graphs · Greedy · Recursion',
-    color: 'violet',
-  },
+  // {
+  //   platform: 'Problems',
+  //   stat: '750+',
+  //   label: 'DSA Solved',
+  //   sub: 'Arrays · DP · Graphs · Greedy · Recursion',
+  //   color: 'violet',
+  // },
 ]
 
 const timeline = [

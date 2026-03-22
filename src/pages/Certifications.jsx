@@ -8,8 +8,6 @@ import './Certifications.css'
 import algoImg from '../assets/certs/algo.png'
 import googleNetImg from '../assets/certs/bbcn.png'
 import cloud from '../assets/certs/cld.png'
-import digitalImg from '../assets/certs/dslgp.png'
-import netFundImg from '../assets/certs/fnc.png'
 import fcc from '../assets/certs/freecc.png'
 import gcpImg from '../assets/certs/gcp.png'
 import genai1Img from '../assets/certs/genai1.png'
@@ -17,7 +15,6 @@ import genai2Img from '../assets/certs/genai2.png'
 import ibmAiImg from '../assets/certs/ibm-ai.png'
 import hwOsImg from '../assets/certs/ihos.png'
 import mernImg from '../assets/certs/mernImg.png'
-import p2pImg from '../assets/certs/p2plan.png'
 import promptImg from '../assets/certs/prompt.png'
 import psnImg from '../assets/certs/psna.png'
 import tcpipImg from '../assets/certs/tcpip.png'
@@ -138,22 +135,22 @@ const groups = [
         link: 'https://www.coursera.org/account/accomplishments/verify/32IQCXX4FFX4',
         image: psnImg, // replace with: psnImg
       },
-      {
-        icon: '🌐',
-        name: 'Peer-to-Peer Protocols & LAN',
-        issuer: 'Coursera · University of Colorado',
-        year: 'Oct 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/VQYFZX3YVCG9',
-        image: p2pImg, // replace with: p2pImg
-      },
-      {
-        icon: '🌐',
-        name: 'Fundamentals of Network Communication',
-        issuer: 'Coursera · University of Colorado',
-        year: 'Sep 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/GNTY8I0HPKW1',
-        image: netFundImg, // replace with: netFundImg
-      },
+      // {
+      //   icon: '🌐',
+      //   name: 'Peer-to-Peer Protocols & LAN',
+      //   issuer: 'Coursera · University of Colorado',
+      //   year: 'Oct 2024',
+      //   link: 'https://www.coursera.org/account/accomplishments/verify/VQYFZX3YVCG9',
+      //   image: p2pImg, // replace with: p2pImg
+      // },
+      // {
+      //   icon: '🌐',
+      //   name: 'Fundamentals of Network Communication',
+      //   issuer: 'Coursera · University of Colorado',
+      //   year: 'Sep 2024',
+      //   link: 'https://www.coursera.org/account/accomplishments/verify/GNTY8I0HPKW1',
+      //   image: netFundImg, // replace with: netFundImg
+      // },
       {
         icon: '🌐',
         name: 'The Bits and Bytes of Computer Networking',
@@ -170,14 +167,14 @@ const groups = [
         link: 'https://www.coursera.org/account/accomplishments/verify/A0MBB0YM4OXE',
         image: hwOsImg, // replace with: hwOsImg
       },
-      {
-        icon: '💻',
-        name: 'Digital Systems: From Logic Gates to Processors',
-        issuer: 'Universitat Autònoma de Barcelona',
-        year: 'Sep 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/QTB57ZPT64T9',
-        image: digitalImg, // replace with: digitalImg
-      },
+      // {
+      //   icon: '💻',
+      //   name: 'Digital Systems: From Logic Gates to Processors',
+      //   issuer: 'Universitat Autònoma de Barcelona',
+      //   year: 'Sep 2024',
+      //   link: 'https://www.coursera.org/account/accomplishments/verify/QTB57ZPT64T9',
+      //   image: digitalImg, // replace with: digitalImg
+      // },
     ],
   },
 ]

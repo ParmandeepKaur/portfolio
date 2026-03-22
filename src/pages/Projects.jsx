@@ -15,7 +15,7 @@ const projects = [
     name: 'MeetUp Live',
     sub: 'Full-Stack Video Conferencing Platform',
     desc: 'Browser-based video conferencing with real-time multi-user audio & video over WebRTC. Built the complete signaling layer — SDP negotiation, ICE exchange — using Socket.IO, with JWT auth, live chat, and screen sharing.',
-    impact: 'Handled real-time multi-user communication with sub-second latency — no third-party media servers.',
+    impact: 'Handled real-time multi-user communication with sub-second latency.',
     image: meetupImg,
     imgAlt: 'MeetUp Live Screenshot',
     metrics: [
@@ -93,7 +93,7 @@ const projects = [
     name: 'Hospital Operations Dashboard',
     sub: 'Power BI · Healthcare Analytics',
     desc: 'Interactive Power BI dashboard tracking hospital capacity, staffing levels, and financial KPIs. Transforms raw operational data into actionable insights with drill-through visuals.',
-    impact: 'Reduced insight-to-decision time with live KPI monitoring across departments.',
+    impact: 'Enabled real-time monitoring of hospital KPIs, improving operational decision-making.',
     image: hospitalDashboardImg,
     imgAlt: 'Hospital Dashboard Screenshot',
     metrics: [

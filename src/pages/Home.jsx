@@ -240,7 +240,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <div>
-                <div className="cta-strip-title">Let's work together</div>
+                <div className="cta-strip-title">Let’s build something impactful together</div>
                 <div className="cta-strip-sub">
                   Currently seeking SDE internships and open to interesting projects.
                 </div>

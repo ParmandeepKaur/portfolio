@@ -25,7 +25,7 @@ const skillGroups = [
     icon: '🤖',
     title: 'Machine Learning',
     color: 'violet',
-    skills: ['Regression', 'Classification', 'SHAP', 'Pandas', 'NumPy', 'CLustering', 'Ensemble Learning'],
+    skills: ['Regression', 'Classification','Clustering', 'Ensemble Learning', 'SHAP', 'Pandas', 'NumPy', ],
   },
   {
     icon: '🗄️',
@@ -35,7 +35,7 @@ const skillGroups = [
   },
   {
     icon: '⚙️',
-    title: 'Tools & DevOps',
+    title: 'Tools, DevOps & Utilities',
     color: 'amber',
     skills: ['Git', 'GitHub', 'Docker', 'Linux', 'Vercel', 'JWT', 'bcrypt', 'Cloudinary'],
   },
@@ -49,9 +49,9 @@ export default function Skills() {
 
           <div className="section-header">
             <div className="section-eyebrow">What I work with</div>
-            <h1 className="section-title">Technical Arsenal</h1>
+            <h1 className="section-title">Technical Skills</h1>
             <p className="section-sub">
-              Technologies I use to build full-stack applications and ML systems.
+              Technologies and fundamentals I use to build scalable software systems.
             </p>
           </div>
 

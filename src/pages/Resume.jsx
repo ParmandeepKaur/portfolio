@@ -34,7 +34,7 @@ const experience = [
     period: 'June – July 2025',
     role: 'Competitive Programming Training',
     org: 'AlgoTutor · LPU',
-    detail: '28-day intensive · 140+ hours · DP, Graphs, Greedy, Recursion',
+    detail: 'Completed intensive training covering DP, Graphs, Greedy, and advanced problem-solving.',
     current: false,
   },
   // Add internships / work experience here as you get them
@@ -164,7 +164,7 @@ export default function Resume() {
 
               <TimelineSection
                 icon={<Briefcase size={16} />}
-                title="Experience & Practical Exposure"
+                title="Experience & Training"
                 items={experience}
                 renderItem={item => (
                   <>

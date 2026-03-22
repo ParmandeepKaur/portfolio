@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom container">
-        <span>© 2025 Gurleen Kaur · Designed & Built from scratch</span>
+        <span>© 2026 Gurleen Kaur · Designed & Built from scratch</span>
         <span>Lovely Professional University · B.Tech CSE</span>
       </div>
     </footer>

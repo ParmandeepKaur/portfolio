@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, Linkedin, Github, Send, MapPin, CheckCircle } from 'lucide-react'
+import { CheckCircle, Github, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react'
+import { useState } from 'react'
 import PageTransition from '../components/PageTransition'
 import './Contact.css'
 
@@ -63,7 +63,7 @@ export default function Contact() {
         <div className="container">
 
           <div className="section-header">
-            <div className="section-eyebrow">Let's connect</div>
+            <div className="section-eyebrow">Let’s connect & collaborate</div>
             <h1 className="section-title">Get In Touch</h1>
             <p className="section-sub">
               Open to SDE internships, interesting projects, and tech conversations. Drop me a message.
@@ -84,12 +84,11 @@ export default function Contact() {
                   <div className="contact-avatar">GK</div>
                   <div>
                     <div className="contact-intro-name">Gurleen Kaur</div>
-                    <div className="contact-intro-role">Software Engineer · ML Enthusiast</div>
+                    <div className="contact-intro-role">Aspiring Software Engineer · ML Enthusiast</div>
                   </div>
                 </div>
                 <p className="contact-intro-text">
-                  I'm currently pursuing B.Tech in CSE at LPU (2027) and actively looking for SDE internships. I'm also open to collaborations on open-source or interesting side projects.
-                </p>
+                    I’m a third-year CSE student at LPU, actively looking for SDE internships and opportunities to build impactful systems.                </p>
                 <div className="contact-status">
                   <span className="live-dot-sm" />
                   Available for opportunities
