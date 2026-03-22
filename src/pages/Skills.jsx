@@ -25,7 +25,7 @@ const skillGroups = [
     icon: '🤖',
     title: 'Machine Learning',
     color: 'violet',
-    skills: ['Scikit-learn', 'CatBoost', 'SHAP', 'Pandas', 'NumPy', 'Flask', 'Ensemble Learning'],
+    skills: ['Regression', 'Classification', 'SHAP', 'Pandas', 'NumPy', 'CLustering', 'Ensemble Learning'],
   },
   {
     icon: '🗄️',
