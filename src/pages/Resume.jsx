@@ -134,11 +134,12 @@ export default function Resume() {
                 Education, experience, projects, and profiles — at a glance.
               </p>
             </div>
-            <a
-              href="mailto:gurleennn5@gmail.com?subject=Resume Request"
+           <a
+              href="/gurleenkaurrcv.pdf"
+              download="Gurleen_Kaur_Resume.pdf"
               className="btn btn-primary resume-download-btn"
             >
-              <Download size={15} /> Request Full Resume
+              <Download size={15} /> Download Resume
             </a>
           </div>
 
