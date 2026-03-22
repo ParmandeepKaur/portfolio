@@ -1,78 +1,242 @@
-.certs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.cert-card {
-  padding: 2rem;
+/* ── Groups ── */
+.cert-groups {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 3rem;
 }
 
-.cert-blue:hover   { border-color: rgba(79,142,247,0.3) !important; }
-.cert-violet:hover { border-color: rgba(167,139,250,0.3) !important; }
-.cert-amber:hover  { border-color: rgba(245,158,11,0.3) !important; }
+.cert-group-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text2);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.cert-group-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot-blue   { background: var(--accent); }
+.dot-violet { background: var(--violet); }
+.dot-amber  { background: var(--amber);  }
 
-.cert-top {
+.cert-group-count {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: var(--text3);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* ── Cards row ── */
+.cert-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Card ── */
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.cert-blue:hover   { border-color: rgba(79,142,247,0.3)  !important; }
+.cert-violet:hover { border-color: rgba(167,139,250,0.3) !important; }
+.cert-amber:hover  { border-color: rgba(245,158,11,0.3)  !important; }
+
+/* ── Image area ── */
+.cert-img-area {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+}
+.cert-img-area.has-image {
+  cursor: pointer;
+}
+.cert-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.cert-img-area.has-image:hover .cert-thumb {
+  transform: scale(1.04);
+}
+.cert-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  color: #fff;
+}
+.cert-img-area.has-image:hover .cert-img-overlay {
+  opacity: 1;
+}
+
+/* Empty image state */
+.cert-img-empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.cert-icon-lg { font-size: 2rem; opacity: 0.5; }
+.cert-img-hint {
+  font-size: 0.62rem;
+  font-family: var(--font-mono);
+  color: var(--text3);
+  opacity: 0.6;
+}
+
+/* ── Info ── */
+.cert-info {
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+.cert-header-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+  margin-bottom: 0.1rem;
 }
-
-.cert-icon-box {
-  width: 52px; height: 52px;
-  border-radius: var(--radius);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem;
-  border: 1px solid var(--border);
-  background: var(--surface2);
+.cert-name {
+  font-size: 0.83rem;
+  font-weight: 700;
+  line-height: 1.35;
+  flex: 1;
 }
-.cert-icon-blue   { background: var(--accent-dim);  border-color: rgba(79,142,247,0.2); }
-.cert-icon-violet { background: var(--violet-dim);  border-color: rgba(167,139,250,0.2); }
-.cert-icon-amber  { background: var(--amber-dim);   border-color: rgba(245,158,11,0.2); }
-
 .cert-year-tag {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  padding: 0.25rem 0.6rem;
+  font-size: 0.62rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 4px;
-  border: 1px solid var(--border);
-  color: var(--text3);
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .cert-year-blue   { color: var(--accent); background: var(--accent-dim); border-color: rgba(79,142,247,0.2); }
 .cert-year-violet { color: var(--violet); background: var(--violet-dim); border-color: rgba(167,139,250,0.2); }
 .cert-year-amber  { color: var(--amber);  background: var(--amber-dim);  border-color: rgba(245,158,11,0.2); }
 
-.cert-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 0.35rem;
-}
 .cert-issuer {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-family: var(--font-mono);
   color: var(--text3);
-  margin-bottom: 1rem;
 }
-.cert-desc {
-  font-size: 0.83rem;
-  color: var(--text2);
-  line-height: 1.7;
-  flex: 1;
+
+.cert-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.75rem;
 }
-.cert-link {
+.cert-link, .cert-preview-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  margin-top: 1.25rem;
-  font-size: 0.78rem;
+  gap: 0.35rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-sans);
   transition: opacity 0.2s;
 }
-.cert-link:hover { opacity: 0.75; }
+.cert-link:hover, .cert-preview-btn:hover { opacity: 0.7; }
+.cert-preview-btn { color: var(--text2); }
+
+/* ── Lightbox ── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+}
+.lightbox-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 50%;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.lightbox-close:hover { background: var(--border2); }
+.lightbox-img {
+  width: 100%;
+  display: block;
+  max-height: 75vh;
+  object-fit: contain;
+  background: var(--bg);
+}
+.lightbox-name {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--text2);
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .cert-cards-row { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 400px) {
+  .cert-cards-row { grid-template-columns: 1fr; }
+}

@@ -7,7 +7,13 @@ const skillGroups = [
     icon: '💻',
     title: 'Programming Languages',
     color: 'blue',
-    skills: ['Java', 'C++', 'Python', 'JavaScript', 'C'],
+    skills: ['C++', 'Java', 'Python', 'JavaScript', 'C'],
+  },
+  {
+    icon: '🧠',
+    title: 'Core Computer Science',
+    color: 'violet',
+    skills: ['DSA', 'OOP', 'OS', 'DBMS', 'Computer Networks'],
   },
   {
     icon: '🌐',
@@ -19,15 +25,7 @@ const skillGroups = [
     icon: '🤖',
     title: 'Machine Learning',
     color: 'violet',
-    skills: [
-      'Regression',
-      'Classification',
-      'Clustering',
-      'Ensemble Learning',
-      'Scikit-learn',
-      'CatBoost',
-      'SHAP'
-    ],
+    skills: ['Scikit-learn', 'CatBoost', 'SHAP', 'Pandas', 'NumPy', 'Flask', 'Ensemble Learning'],
   },
   {
     icon: '🗄️',
@@ -36,25 +34,10 @@ const skillGroups = [
     skills: ['MongoDB', 'MySQL'],
   },
   {
-    icon: '🧠',
-    title: 'Core Computer Science',
-    color: 'violet',
-    skills: ['Data Structures & Algorithms', 'Operating Systems', 'DBMS', 'Computer Networks', 'OOP'],
-  },
-  {
     icon: '⚙️',
     title: 'Tools & DevOps',
     color: 'amber',
-    skills: [
-      'Git',
-      'GitHub',
-      'Linux (Ubuntu)',
-      'Docker',
-      'CI/CD',
-      'AWS (Fundamentals)',
-      'JWT Authentication',
-      'MVC Architecture'
-    ],
+    skills: ['Git', 'GitHub', 'Docker', 'Linux', 'Vercel', 'JWT', 'bcrypt', 'Cloudinary'],
   },
 ]
 
@@ -68,7 +51,8 @@ export default function Skills() {
             <div className="section-eyebrow">What I work with</div>
             <h1 className="section-title">Technical Arsenal</h1>
             <p className="section-sub">
-                A curated set of technologies and concepts I leverage to build scalable full-stack applications and intelligent systems.            </p>
+              Technologies I use to build full-stack applications and ML systems.
+            </p>
           </div>
 
           <div className="skills-grid">

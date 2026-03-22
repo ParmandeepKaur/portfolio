@@ -28,7 +28,7 @@ const highlights = [
   {
     icon: <Brain size={20} />,
     title: 'Machine Learning',
-    desc: 'CatBoost · SHAP · Scikit-learn · Flask',
+    desc: 'Regression · Classification · Clustering · Ensemble Learning',
     color: 'violet',
   },
   {
@@ -135,7 +135,7 @@ export default function Home() {
                   </div>
                   <div className="info-row">
                     <span className="info-key">DSA Solved</span>
-                    <span className="info-val">788+ Problems</span>
+                    <span className="info-val">750+ Problems</span>
                   </div>
                   <div className="info-row">
                     <span className="info-key">SIH 2023</span>
