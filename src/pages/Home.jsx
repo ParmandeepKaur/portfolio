@@ -180,7 +180,7 @@ export default function Home() {
         </section>
 
         {/* ── ABOUT ── */}
-        <section className="section about-section">
+        {/* <section className="section about-section">
           <div className="container about-grid">
             <motion.div
               className="about-text"
@@ -224,7 +224,61 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
+       <section className="section about-section">
+  <div className="container about-grid">
+
+    {/* ── Left: Text ── */}
+    <motion.div
+      className="about-text"
+      initial={{ opacity: 0, x: -24 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <div className="section-eyebrow">About Me</div>
+      <h2 className="about-heading">
+        Building at the intersection of<br />
+        <span className="about-heading-accent">web &amp; intelligence.</span>
+      </h2>
+
+      <p className="about-para">
+        I'm a third-year CSE student at <strong>Lovely Professional University</strong>, with a focus on software engineering and applied machine learning.
+      </p>
+      <p className="about-para">
+        I build full-stack applications with the <strong>MERN stack</strong>, specialising in real-time systems — WebRTC, signaling, concurrent backends. On the ML side, I treat models as products: my osteoporosis predictor delivers <strong>zero false positives</strong> using CatBoost and SHAP.
+      </p>
+      <p className="about-para">
+        I'm actively looking for <strong>SDE internships</strong> where I can contribute to production systems and ship real features.
+      </p>
+
+      <div className="about-actions">
+        <Link to="/projects" className="btn btn-primary">
+          See My Work <ArrowRight size={14} />
+        </Link>
+        <Link to="/contact" className="btn btn-outline">
+          Get In Touch
+        </Link>
+      </div>
+    </motion.div>
+
+    {/* ── Right: Image ── */}
+    <motion.div
+      className="about-image-wrapper"
+      initial={{ opacity: 0, x: 24 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <img
+        src="/gurleen_photo.jpg"
+        alt="Gurleen Kaur"
+        className="about-image"
+      />
+    </motion.div>
+
+  </div>
+</section>
 
         {/* ── LIVE CODING STATS ── */}
         <LiveStats />

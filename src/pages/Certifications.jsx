@@ -7,16 +7,13 @@ import './Certifications.css'
 // ── Import cert images here as you add them to src/assets/certs/ ─────────────
 import algoImg from '../assets/certs/algo.png'
 import googleNetImg from '../assets/certs/bbcn.png'
-import cloud from '../assets/certs/cld.png'
 import fcc from '../assets/certs/freecc.png'
 import gcpImg from '../assets/certs/gcp.png'
 import genai1Img from '../assets/certs/genai1.png'
-import genai2Img from '../assets/certs/genai2.png'
 import ibmAiImg from '../assets/certs/ibm-ai.png'
 import hwOsImg from '../assets/certs/ihos.png'
 import mernImg from '../assets/certs/mernImg.png'
 import promptImg from '../assets/certs/prompt.png'
-import psnImg from '../assets/certs/psna.png'
 import tcpipImg from '../assets/certs/tcpip.png'
 const groups = [
   {
@@ -75,14 +72,14 @@ const groups = [
         link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-4872e303-8f5b-4455-a1e1-9c4b01802643.pdf',
         image: genai1Img, // replace with: genai1Img
       },
-      {
-        icon: '🤖',
-        name: 'Build Generative AI Apps with No-Code Tools',
-        issuer: 'Udemy',
-        year: 'Sep 2025',
-        link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-24faf0cb-5d0d-4c46-b4fb-0e98a8e4fa28.pdf',
-        image: genai2Img, // replace with: genai2Img
-      },
+      // {
+      //   icon: '🤖',
+      //   name: 'Build Generative AI Apps with No-Code Tools',
+      //   issuer: 'Udemy',
+      //   year: 'Sep 2025',
+      //   link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-24faf0cb-5d0d-4c46-b4fb-0e98a8e4fa28.pdf',
+      //   image: genai2Img, // replace with: genai2Img
+      // },
       {
         icon: '🤖',
         name: 'ChatGPT-4 Prompt Engineering',
@@ -101,20 +98,20 @@ const groups = [
       },
     ],
   },
-  {
-    label: 'Cloud',
-    color: 'blue',
-    certs: [
-      {
-        icon: '☁️',
-        name: 'Cloud Technical Series: Gemini at Work',
-        issuer: 'Google Cloud Skills Boost',
-        year: 'Nov 2025',
-        link: 'https://www.credential.net/1a9506f8-e489-4321-b9b1-91f946d3e75b',
-        image: cloud, // replace with: gcpImg
-      },
-    ],
-  },
+  // {
+  //   label: 'Cloud',
+  //   color: 'blue',
+  //   certs: [
+  //     {
+  //       icon: '☁️',
+  //       name: 'Cloud Technical Series: Gemini at Work',
+  //       issuer: 'Google Cloud Skills Boost',
+  //       year: 'Nov 2025',
+  //       link: 'https://www.credential.net/1a9506f8-e489-4321-b9b1-91f946d3e75b',
+  //       image: cloud, // replace with: gcpImg
+  //     },
+  //   ],
+  // },
   {
     label: 'Networking / Systems',
     color: 'amber',
@@ -127,14 +124,14 @@ const groups = [
         link: 'https://www.coursera.org/account/accomplishments/verify/58Q649INGJFK',
         image: tcpipImg, // replace with: tcpipImg
       },
-      {
-        icon: '🌐',
-        name: 'Packet Switching Networks & Algorithms',
-        issuer: 'Coursera · University of Colorado',
-        year: 'Oct 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/32IQCXX4FFX4',
-        image: psnImg, // replace with: psnImg
-      },
+      // {
+      //   icon: '🌐',
+      //   name: 'Packet Switching Networks & Algorithms',
+      //   issuer: 'Coursera · University of Colorado',
+      //   year: 'Oct 2024',
+      //   link: 'https://www.coursera.org/account/accomplishments/verify/32IQCXX4FFX4',
+      //   image: psnImg, // replace with: psnImg
+      // },
       // {
       //   icon: '🌐',
       //   name: 'Peer-to-Peer Protocols & LAN',
