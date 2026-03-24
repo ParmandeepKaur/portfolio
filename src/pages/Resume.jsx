@@ -70,7 +70,7 @@ const languages = [
   {
     name: 'Spanish (Duolingo)',
     level: 'Basic',
-    detail: 'Completed Duolingo Spanish with score 19.',
+    detail: 'Duolingo Spanish score 19.',
   },
 ];
 
