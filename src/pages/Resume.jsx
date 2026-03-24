@@ -1,93 +1,80 @@
 import { motion } from 'framer-motion'
-import { Award, Briefcase, Code2, Download, GraduationCap } from 'lucide-react'
+import { Briefcase, Download, GraduationCap } from 'lucide-react'
 import PageTransition from '../components/PageTransition'
 import './Resume.css'
 
-// ── Data ──────────────────────────────────────────────────────────────────────
+// ── Data ─────────────────────────────────────────
 
+// Education
 const education = [
   {
     period: '2023 – 2027',
     degree: 'B.Tech — Computer Science & Engineering',
     institution: 'Lovely Professional University, Phagwara',
-    detail: 'CGPA: 8.94',
+    detail: 'CGPA: 8.27',
     current: true,
   },
   {
-    period: '2022 – 2023',
+    period: '2021 – 2022',
     degree: '12th Grade',
-    institution: 'Woodland Overseas School, Hoshiarpur',
-    detail: '95.8%',
+    institution: 'Cambridge International School, Phagwara',
+    detail: '90.4%',
     current: false,
   },
   {
-    period: '2020 – 2021',
+    period: '2019 – 2020',
     degree: '10th Grade',
-    institution: 'Woodland Overseas School, Hoshiarpur',
-    detail: '95%',
+    institution: 'Shri Guru Ram Rai Public School, Phagwara',
+    detail: '84.8%',
     current: false,
   },
 ]
 
+// Experience
 const experience = [
   {
+    period: 'Jun 2023 – Aug 2025',
+    role: 'Freelance Translator',
+    org: 'The Translation Masters Inc.',
+    detail:
+      'Translated content between English, Hindi, and Punjabi with focus on accuracy and contextual meaning. Assisted in multilingual communication.',
+    current: true,
+  },
+  {
     period: 'June – July 2025',
-    role: 'Competitive Programming Training',
-    org: 'AlgoTutor · LPU',
-    detail: 'Completed intensive training covering DP, Graphs, Greedy, and advanced problem-solving.',
+    role: 'MERN Full Stack Development Programme',
+    org: 'GokBoru Tech Pvt Ltd',
+    detail:
+      'Completed intensive training building projects using MERN Stack & APIs.',
     current: false,
   },
-  // Add internships / work experience here as you get them
-  // {
-  //   period: 'May – Jul 2026',
-  //   role: 'Software Engineer Intern',
-  //   org: 'Company Name',
-  //   detail: '1-line impact statement',
-  //   current: false,
-  // },
 ]
 
-const projects = [
+// Languages
+const languages = [
   {
-    period: '2025',
-    name: 'MeetUp Live',
-    stack: 'React · Node.js · WebRTC · Socket.IO · MongoDB',
-    detail: 'Real-time P2P video conferencing with live chat and screen sharing.',
+    name: 'English',
+    level: 'Fluent',
+    detail: 'Professional working proficiency.',
   },
   {
-    period: '2025',
-    name: 'Osteoporosis Risk Predictor',
-    stack: 'Python · CatBoost · SHAP · Flask',
-    detail: 'ML pipeline on 1,954 records — AUC 0.923, Precision 1.0.',
+    name: 'Hindi',
+    level: 'Fluent',
+    detail: 'Native proficiency.',
   },
   {
-    period: '2024',
-    name: 'WanderLust',
-    stack: 'Node.js · Express · MongoDB · Cloudinary',
-    detail: 'Full-stack hotel booking with role-based auth and REST APIs.',
+    name: 'Punjabi',
+    level: 'Fluent',
+    detail: 'Native proficiency.',
   },
   {
-    period: '2025',
-    name: 'Dynamic Route Optimiser',
-    stack: 'JavaScript · Node.js · Graph Algorithms',
-    detail: 'Graph-based route optimization minimizing multi-node travel distance.',
+    name: 'Spanish (Duolingo)',
+    level: 'Basic',
+    detail: 'Completed Duolingo Spanish with score 19.',
   },
-]
+];
 
-const certs = [
-  { name: 'Delta — Full Stack Web Development', issuer: 'Apna College', year: '2025' },
-  { name: 'TCP/IP and Advanced Topics',         issuer: 'Coursera · University of Colorado', year: '2024' },
-  { name: 'Competitive Programming Training',   issuer: 'AlgoTutor', year: '2025' },
-]
-
-const profiles = [
-  { label: 'LeetCode', val: 'Rating 1806 · Top 8%',        link: 'https://leetcode.com/u/gurleen-kaur5/' },
-  { label: 'CodeChef', val: 'Rating 1495',                  link: 'https://www.codechef.com/users/gurleen_kaur5' },
-  { label: 'GitHub',   val: 'github.com/gurleen-kaur5',     link: 'https://github.com/gurleen-kaur5' },
-  { label: 'LinkedIn', val: 'linkedin.com/in/gurleen-kaur5', link: 'https://linkedin.com/in/gurleen-kaur5' },
-]
-
-// ── Reusable timeline section ─────────────────────────────────────────────────
+// ── Timeline Component ─────────────────────────
 
 function TimelineSection({ icon, title, items, renderItem }) {
   return (
@@ -96,6 +83,7 @@ function TimelineSection({ icon, title, items, renderItem }) {
         <span className="rs-icon">{icon}</span>
         {title}
       </div>
+
       <div className="timeline">
         {items.map((item, i) => (
           <motion.div
@@ -103,13 +91,13 @@ function TimelineSection({ icon, title, items, renderItem }) {
             className="tl-item"
             initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08, duration: 0.4 }}
+            transition={{ delay: i * 0.08 }}
           >
             <div className="tl-dot-col">
               <div className={`tl-dot ${item.current ? 'tl-dot-live' : ''}`} />
               <div className="tl-line" />
             </div>
+
             <div className="tl-content">{renderItem(item)}</div>
           </motion.div>
         ))}
@@ -118,7 +106,7 @@ function TimelineSection({ icon, title, items, renderItem }) {
   )
 }
 
-// ── Page ─────────────────────────────────────────────────────────────────────
+// ── Page ───────────────────────────────────────
 
 export default function Resume() {
   return (
@@ -126,17 +114,19 @@ export default function Resume() {
       <div className="section resume-page">
         <div className="container">
 
+          {/* Header */}
           <div className="resume-header-row section-header">
             <div>
               <div className="section-eyebrow">Background</div>
               <h1 className="section-title">Resume</h1>
               <p className="section-sub">
-                Education, experience, projects, and profiles — at a glance.
+                Education, experience, and language skills at a glance.
               </p>
             </div>
-           <a
-              href="/gurleenkaurrcv.pdf"
-              download="Gurleen_Kaur_Resume.pdf"
+
+            <a
+              href="/ParmandeepKaurCV.pdf"
+              download="Parmandeep_Kaur_Resume.pdf"
               className="btn btn-primary resume-download-btn"
             >
               <Download size={15} /> Download Resume
@@ -145,9 +135,10 @@ export default function Resume() {
 
           <div className="resume-grid">
 
-            {/* ── LEFT COLUMN ── */}
+            {/* LEFT COLUMN */}
             <div className="resume-col">
 
+              {/* Education */}
               <TimelineSection
                 icon={<GraduationCap size={16} />}
                 title="Education"
@@ -161,87 +152,60 @@ export default function Resume() {
                   </>
                 )}
               />
-
-              <TimelineSection
-                icon={<Briefcase size={16} />}
-                title="Experience & Training"
-                items={experience}
-                renderItem={item => (
-                  <>
-                    <div className="tl-period">{item.period}</div>
-                    <div className="tl-title">{item.role}</div>
-                    <div className="tl-org">{item.org}</div>
-                    <div className="tl-detail">{item.detail}</div>
-                  </>
-                )}
-              />
-
-              {/* Coding Profiles */}
-              <div className="resume-section">
-                <div className="rs-title">
-                  <span className="rs-icon">⌨</span>
-                  Coding Profiles
-                </div>
-                <div className="profiles-list">
-                  {profiles.map(p => (
-                    <a
-                      key={p.label}
-                      href={p.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="profile-row"
-                    >
-                      <span className="profile-label">{p.label}</span>
-                      <span className="profile-val">{p.val}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
             </div>
+{/* RIGHT COLUMN */}
+<div className="resume-col">
 
-            {/* ── RIGHT COLUMN ── */}
-            <div className="resume-col">
+  {/* Experience */}
+  <TimelineSection
+    icon={<Briefcase size={16} />}
+    title="Experience & Training"
+    items={experience}
+    renderItem={item => (
+      <>
+        <div className="tl-period">{item.period}</div>
+        <div className="tl-title">{item.role}</div>
+        <div className="tl-org">{item.org}</div>
+        <div className="tl-detail">{item.detail}</div>
+      </>
+    )}
+  />
 
-              <TimelineSection
-                icon={<Code2 size={16} />}
-                title="Projects"
-                items={projects}
-                renderItem={item => (
-                  <>
-                    <div className="tl-period">{item.period}</div>
-                    <div className="tl-title">{item.name}</div>
-                    <div className="tl-org">{item.stack}</div>
-                    <div className="tl-detail">{item.detail}</div>
-                  </>
-                )}
-              />
+  {/* Languages */}
+  <div className="resume-section">
+    <div className="rs-title">🌍 Languages</div>
 
-              {/* Top 3 Certifications */}
-              <div className="resume-section">
-                <div className="rs-title">
-                  <span className="rs-icon"><Award size={16} /></span>
-                  Certifications
-                  <span className="rs-sub-note">Top 3 · <a href="/certifications" className="rs-view-all">View all →</a></span>
-                </div>
-                <div className="certs-list">
-                  {certs.map((c, i) => (
-                    <motion.div
-                      key={c.name}
-                      className="rc-item"
-                      initial={{ opacity: 0, x: 16 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.08 }}
-                    >
-                      <div className="rc-name">{c.name}</div>
-                      <div className="rc-meta">{c.issuer} · {c.year}</div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+    {languages.map((l, i) => (
+  <motion.div
+    key={i}
+    initial={{ opacity: 0, x: 16 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ delay: i * 0.1 }}
+    style={{ display: 'flex', gap: '10px', marginBottom: '12px' }}
+  >
+    {/* Dot */}
+    <div
+      style={{
+        width: '8px',
+        height: '8px',
+        backgroundColor: '#4da3ff',
+        borderRadius: '50%',
+        marginTop: '6px',
+      }}
+    />
 
-            </div>
+    {/* Content */}
+    <div className="tl-detail">
+      <strong>{l.name}</strong> — {l.level}
+      <br />
+      <span>{l.detail}</span>
+    </div>
+  </motion.div>
+))}
+  </div>
+
+</div>
+
           </div>
 
         </div>

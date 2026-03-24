@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
         <NavLink to="/" className="nav-logo">
-          <span className="logo-bracket"></span>GK<span className="logo-bracket"></span>
+          <span className="logo-bracket"></span>PK<span className="logo-bracket"></span>
         </NavLink>
 
         <nav className="nav-links-desktop">

@@ -223,3 +223,34 @@
   .tl-card { padding: 1.25rem; }
   .tl-card-header { flex-direction: column; gap: 0.5rem; }
 }
+.badges-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.badges-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.badge-card {
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.badge-card:hover {
+  transform: scale(1.05);
+}
+
+.badge-img {
+  width: 100%;
+  height: auto;
+}

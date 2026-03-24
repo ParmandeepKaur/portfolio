@@ -1,67 +1,84 @@
 import { useEffect, useState } from "react";
 
-// In dev: calls http://localhost:5000/api/stats (run `vercel dev`)
-// In prod: calls /api/stats on same Vercel domain — no CORS, no backend needed
-const API_URL = import.meta.env.DEV
-  ? (import.meta.env.VITE_API_URL ?? "http://localhost:3000")
-  : "";
+// ✅ usernames
+const GITHUB_USERNAME = "ParmandeepKaur";
+const LEETCODE_USERNAME = "7VbyC6i50H";
 
-const CACHE_KEY = "portfolio_stats_v2";
-const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours (matches CDN cache)
+// ✅ manual data (EDIT THESE)
+const CODECHEF_DATA = {
+  username: "ideal_sail_60",
+  rating: 1500,          // 🔁 your rating
+  problemsSolved: 120,   // 🔁 your solved count
+};
 
-const FALLBACK = {
-  leetcode: {
-    totalSolved: 788, easy: 220, medium: 490, hard: 78,
-    streak: 271, totalActiveDays: 339,
-    contestRating: 1806, topPercentage: 8.0,
-    profileUrl: "https://leetcode.com/u/gurleen-kaur5/",
-  },
-  github: {
-    publicRepos: 5, followers: 0, totalStars: 0,
-    topLanguages: ["JavaScript", "Python", "Java"],
-    profileUrl: "https://github.com/gurleen-kaur5",
-  },
-  lastUpdated: null,
-  isFallback: true,
+const HACKERRANK_DATA = {
+  username: "mandhirkaur733",
+  problemsSolved: 100,   // 🔁 your solved count
+  badges: 5,             // 🔁 number of badges
+};
+
+const GFG_DATA = {
+  username: "mandhirkp7la",
+  score: 494,     // 🔁 your score
+  rank: 4991,     // 🔁 your rank
 };
 
 export function useStats() {
-  const [data,    setData]    = useState(null);
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let cancelled = false;
-
-    async function load() {
-      // 1. Serve from sessionStorage cache if fresh
+    async function fetchStats() {
       try {
-        const raw = sessionStorage.getItem(CACHE_KEY);
-        if (raw) {
-          const cached = JSON.parse(raw);
-          const age = Date.now() - new Date(cached.lastUpdated).getTime();
-          if (age < CACHE_TTL) {
-            if (!cancelled) { setData(cached); setLoading(false); }
-            return;
-          }
-        }
-      } catch { /* bad cache, ignore */ }
+        // ✅ GitHub
+        const ghRes = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+        const ghData = await ghRes.json();
 
-      // 2. Fetch from /api/stats (Vercel serverless function)
-      try {
-        const res = await fetch(`${API_URL}/api/stats`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const json = await res.json();
+        // ✅ LeetCode
+        const lcRes = await fetch(`https://leetcode-api-faisalshohag.vercel.app/${LEETCODE_USERNAME}`);
+        const lcData = await lcRes.json();
 
-        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify(json)); } catch { /* quota */ }
-        if (!cancelled) { setData(json); setLoading(false); }
-      } catch {
-        // 3. Silently use fallback — UI never breaks
-        if (!cancelled) { setData(FALLBACK); setLoading(false); }
+        const formatted = {
+          github: {
+            publicRepos: ghData.public_repos || 0,
+            followers: ghData.followers || 0,
+            profileUrl: `https://github.com/${GITHUB_USERNAME}`,
+          },
+          leetcode: {
+            totalSolved: lcData.totalSolved || 0,
+            contestRating: lcData.ranking || 0,
+            profileUrl: `https://leetcode.com/u/${LEETCODE_USERNAME}/`,
+          },
+          codechef: {
+            username: CODECHEF_DATA.username,
+            rating: CODECHEF_DATA.rating,
+            problemsSolved: CODECHEF_DATA.problemsSolved,
+            profileUrl: `https://www.codechef.com/users/${CODECHEF_DATA.username}`,
+          },
+          hackerrank: {
+            username: HACKERRANK_DATA.username,
+            problemsSolved: HACKERRANK_DATA.problemsSolved,
+            badges: HACKERRANK_DATA.badges,
+            profileUrl: `https://www.hackerrank.com/${HACKERRANK_DATA.username}`,
+          },
+          gfg: {
+            username: GFG_DATA.username,
+            score: GFG_DATA.score,
+            rank: GFG_DATA.rank,
+            profileUrl: `https://www.geeksforgeeks.org/user/${GFG_DATA.username}`,
+          },
+        };
+
+        setData(formatted);
+      } catch (error) {
+        console.error("Error fetching stats:", error);
+        setData(null);
+      } finally {
+        setLoading(false);
       }
     }
 
-    load();
-    return () => { cancelled = true; };
+    fetchStats();
   }, []);
 
   return { data, loading };

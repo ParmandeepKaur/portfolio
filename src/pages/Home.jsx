@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
-import {
-  ArrowRight, Brain, Code2, ExternalLink,
-  Github, Linkedin, Mail, Trophy,
-} from 'lucide-react'
+import { ArrowRight, ArrowDown, Brain, Code2, ExternalLink,
+  Github, Linkedin, Mail, Trophy } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import LiveStats from '../components/LiveStats/LiveStats'
 import PageTransition from '../components/PageTransition'
@@ -33,8 +31,8 @@ const highlights = [
   },
   {
     icon: <Trophy size={20} />,
-    title: 'Competitive Prog.',
-    desc: 'LC Top 8% · Rating 1806 · 788+ solved',
+    title: 'Devops',
+    desc: 'Git · Docker · Maven',
     color: 'amber',
   },
 ]
@@ -64,7 +62,7 @@ export default function Home() {
               </motion.div>
 
               <motion.h1 variants={stagger.item} className="hero-name">
-                Gurleen<br />
+                Parmandeep<br />
                 <span className="hero-name-outline">Kaur</span>
               </motion.h1>
 
@@ -79,14 +77,14 @@ export default function Home() {
                   View Projects <ArrowRight size={15} />
                 </Link>
                 <a
-                  href="https://github.com/gurleen-kaur5"
+                  href="https://github.com/ParmandeepKaur"
                   target="_blank" rel="noreferrer"
                   className="btn btn-outline"
                 >
                   <Github size={15} /> GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/gurleen-kaur5"
+                  href="https://www.linkedin.com/in/parmandeep-kaur/"
                   target="_blank" rel="noreferrer"
                   className="btn btn-outline"
                 >
@@ -95,11 +93,11 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={stagger.item} className="hero-social-row">
-                <a href="mailto:gurleennn5@gmail.com" className="social-chip">
-                  <Mail size={13} /> gurleennn5@gmail.com
+                <a href="mailto:parmandeepkaur44@gmail.com" className="social-chip">
+                  <Mail size={13} /> parmandeepkaur44@gmail.com
                 </a>
-                <a href="tel:+917986306971" className="social-chip">
-                  +91 7986306971
+                <a href="tel:+918968413173" className="social-chip">
+                  +91 8968413173
                 </a>
               </motion.div>
             </motion.div>
@@ -113,9 +111,9 @@ export default function Home() {
             >
               <div className="hero-card">
                 <div className="hero-card-top">
-                  <div className="hero-avatar">GK</div>
+                  <div className="hero-avatar">PK</div>
                   <div>
-                    <div className="hero-card-name">Gurleen Kaur</div>
+                    <div className="hero-card-name">Parmandeep Kaur</div>
                     <div className="hero-card-role">Aspiring SDE · ML Enthusiast</div>
                   </div>
                 </div>
@@ -130,16 +128,12 @@ export default function Home() {
                     <span className="info-val">B.Tech CSE · 2027</span>
                   </div>
                   <div className="info-row">
-                    <span className="info-key">LeetCode</span>
-                    <span className="info-val lc-val">Rating 1806 · Top 8%</span>
+                    <span className="info-key">CGPA</span>
+                    <span className="info-val">8.27</span>
                   </div>
                   <div className="info-row">
                     <span className="info-key">DSA Solved</span>
-                    <span className="info-val">750+ Problems</span>
-                  </div>
-                  <div className="info-row">
-                    <span className="info-key">SIH 2023</span>
-                    <span className="info-val">Top 30 / 480+ Teams</span>
+                    <span className="info-val">250+ Problems</span>
                   </div>
                   <div className="info-row">
                     <span className="info-key">Focus</span>
@@ -252,14 +246,23 @@ export default function Home() {
         I'm actively looking for <strong>SDE internships</strong> where I can contribute to production systems and ship real features.
       </p>
 
-      <div className="about-actions">
-        <Link to="/projects" className="btn btn-primary">
-          See My Work <ArrowRight size={14} />
-        </Link>
-        <Link to="/contact" className="btn btn-outline">
-          Get In Touch
-        </Link>
-      </div>
+     <div className="about-actions">
+  <Link to="/projects" className="btn btn-primary">
+    See My Work <ArrowRight size={14} />
+  </Link>
+
+  <Link to="/contact" className="btn btn-outline">
+    Get In Touch
+  </Link>
+
+  <a
+    href="/ParmandeepKaurCV.pdf"
+    download="Parmandeep_Kaur_Resume.pdf"
+    className="btn btn-primary"
+  >
+    Download Resume <ArrowDown size={14} />
+  </a>
+</div>
     </motion.div>
 
     {/* ── Right: Image ── */}
@@ -271,8 +274,8 @@ export default function Home() {
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
       <img
-        src="/gurleen_photo.jpg"
-        alt="Gurleen Kaur"
+        src="/Profile.png"
+        alt="Parmandeep Kaur"
         className="about-image"
       />
     </motion.div>
@@ -420,7 +423,7 @@ export default function Home() {
 //               </motion.div>
 
 //               <motion.h1 variants={stagger.item} className="hero-name">
-//                 Gurleen<br />
+//                 Parmandeep Kaur<br />
 //                 <span className="hero-name-outline">Kaur</span>
 //               </motion.h1>
 

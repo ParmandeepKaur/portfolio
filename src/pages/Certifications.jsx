@@ -5,176 +5,154 @@ import PageTransition from '../components/PageTransition'
 import './Certifications.css'
 
 // ── Import cert images here as you add them to src/assets/certs/ ─────────────
-import algoImg from '../assets/certs/algo.png'
-import googleNetImg from '../assets/certs/bbcn.png'
-import fcc from '../assets/certs/freecc.png'
-import gcpImg from '../assets/certs/gcp.png'
-import genai1Img from '../assets/certs/genai1.png'
-import ibmAiImg from '../assets/certs/ibm-ai.png'
-import hwOsImg from '../assets/certs/ihos.png'
-import mernImg from '../assets/certs/mernImg.png'
-import promptImg from '../assets/certs/prompt.png'
-import tcpipImg from '../assets/certs/tcpip.png'
+import aiml1Img from '../assets/certs/aiml1.png'
+import aiml2Img from '../assets/certs/aiml2.png'
+import aiml3Img from '../assets/certs/aiml3.png'
+import aiml4Img from '../assets/certs/aiml4.png'
+import mernImg from '../assets/certs/mern.png'
+import nptelImg from '../assets/certs/nptel.png'
+import net1Img from '../assets/certs/net1.png'
+import net2Img from '../assets/certs/net2.png'
+import net3Img from '../assets/certs/net3.png'
+import net4Img from '../assets/certs/net4.png'
+import net5Img from '../assets/certs/net5.png'
+import net6Img from '../assets/certs/net6.png'
+import net7Img from '../assets/certs/net7.png'
+import net8Img from '../assets/certs/net8.png'
+
 const groups = [
   {
-    label: 'Web Development / Full Stack',
+    label: 'Web Development',
     color: 'blue',
     certs: [
-      {
-        icon: '⚡',
-        name: 'Delta — Full Stack Web Development',
-        issuer: 'Apna College',
-        year: 'May 2025',
-        link: 'https://drive.google.com/file/d/1hAjGzTNskkeQ9_A_MwLDn1hn1BjdZMIp/view?usp=sharing',
-        image: mernImg,
-      },
       {
         icon: '🌐',
-        name: 'Legacy Responsive Web Design',
-        issuer: 'freeCodeCamp',
-        year: 'Nov 2023',
-        link: 'https://www.freecodecamp.org/certification/fccee773b87-601a-4a8c-a68d-31d2571d7414/responsive-web-design',
-        image: fcc, // You can add an image later if you have a screenshot of the cert
-      }
+        name: 'MERN Full Stack Development Certification',
+        issuer: 'GokBoru Tech Pvt Ltd',
+        year: 'Jul 2025',
+        image: mernImg,
+      },
     ],
   },
   {
-    label: 'Programming / Algorithms',
+    label: 'Security / NPTEL',
     color: 'blue',
     certs: [
       {
-        icon: '🏋️',
-        name: 'Competitive Programming Training',
-        issuer: 'AlgoTutor',
-        year: 'June – July 2025',
-        link: 'https://drive.google.com/file/d/1Gj-DIEpFKfFp9Y1UcAfSOv37sJLC6Lrr/view?usp=sharing',
-        image: algoImg,
-      },
-      {
-        icon: '🏕️',
-        name: 'Graphs Camp',
-        issuer: 'AlgoUniversity',
-        year: 'Oct 2025',
-        link: 'https://d3uam8jk4sa4y4.cloudfront.net/static/certificates/graph_camp/gurleen-kaur.png',
-        image: gcpImg,
+        icon: '🔐',
+        name: 'Privacy and Security in Online Social Media',
+        issuer: 'NPTEL',
+        year: 'April 2025',
+        image: nptelImg,
       },
     ],
   },
   {
-    label: 'AI / ML',
+    label: 'AI / Machine Learning',
     color: 'violet',
     certs: [
       {
         icon: '🤖',
-        name: 'Master Generative AI & Tools',
-        issuer: 'Udemy',
-        year: 'Sep 2025',
-        link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-4872e303-8f5b-4455-a1e1-9c4b01802643.pdf',
-        image: genai1Img, // replace with: genai1Img
-      },
-      // {
-      //   icon: '🤖',
-      //   name: 'Build Generative AI Apps with No-Code Tools',
-      //   issuer: 'Udemy',
-      //   year: 'Sep 2025',
-      //   link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-24faf0cb-5d0d-4c46-b4fb-0e98a8e4fa28.pdf',
-      //   image: genai2Img, // replace with: genai2Img
-      // },
-      {
-        icon: '🤖',
-        name: 'ChatGPT-4 Prompt Engineering',
+        name: 'Build Generative AI apps and solutions with No-code tools',
         issuer: 'Infosys Springboard',
         year: 'Aug 2025',
-        link: null,
-        image: promptImg, // replace with: promptImg
+        image: aiml1Img,
       },
       {
         icon: '🤖',
-        name: 'Introduction to Artificial Intelligence',
-        issuer: 'IBM · Coursera',
-        year: 'Aug 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/SDC43QS131WY',
-        image: ibmAiImg, // replace with: ibmAiImg
+        name: 'Computational Theory',
+        issuer: 'Infosys Springboard',
+        year: 'Aug 2025',
+        image: aiml2Img,
+      },
+      {
+        icon: '🤖',
+        name: 'ChatGPT - 4 Prompt Engineering',
+        issuer: 'Infosys Springboard',
+        year: 'Aug 2025',
+        image: aiml3Img,
+      },
+      {
+        icon: '🤖',
+        name: 'Master Generative AI & Generative AI tools',
+        issuer: 'Udemy',
+        year: 'Aug 2025',
+        image: aiml4Img,
       },
     ],
   },
-  // {
-  //   label: 'Cloud',
-  //   color: 'blue',
-  //   certs: [
-  //     {
-  //       icon: '☁️',
-  //       name: 'Cloud Technical Series: Gemini at Work',
-  //       issuer: 'Google Cloud Skills Boost',
-  //       year: 'Nov 2025',
-  //       link: 'https://www.credential.net/1a9506f8-e489-4321-b9b1-91f946d3e75b',
-  //       image: cloud, // replace with: gcpImg
-  //     },
-  //   ],
-  // },
+
   {
-    label: 'Networking / Systems',
+    label: 'Computer Networks & System Architecture',
     color: 'amber',
     certs: [
       {
         icon: '🌐',
-        name: 'TCP/IP and Advanced Topics',
-        issuer: 'Coursera · University of Colorado',
-        year: 'Oct 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/58Q649INGJFK',
-        image: tcpipImg, // replace with: tcpipImg
+        name: 'Introductiont to Hardware & Operating Systems',
+        issuer: 'IBM (Coursera)',
+        year: 'Sep 2024',
+        link: 'https://www.coursera.org/account/accomplishments/verify/C8H1IK6PJ2T1',
+        image: net1Img,
       },
-      // {
-      //   icon: '🌐',
-      //   name: 'Packet Switching Networks & Algorithms',
-      //   issuer: 'Coursera · University of Colorado',
-      //   year: 'Oct 2024',
-      //   link: 'https://www.coursera.org/account/accomplishments/verify/32IQCXX4FFX4',
-      //   image: psnImg, // replace with: psnImg
-      // },
-      // {
-      //   icon: '🌐',
-      //   name: 'Peer-to-Peer Protocols & LAN',
-      //   issuer: 'Coursera · University of Colorado',
-      //   year: 'Oct 2024',
-      //   link: 'https://www.coursera.org/account/accomplishments/verify/VQYFZX3YVCG9',
-      //   image: p2pImg, // replace with: p2pImg
-      // },
-      // {
-      //   icon: '🌐',
-      //   name: 'Fundamentals of Network Communication',
-      //   issuer: 'Coursera · University of Colorado',
-      //   year: 'Sep 2024',
-      //   link: 'https://www.coursera.org/account/accomplishments/verify/GNTY8I0HPKW1',
-      //   image: netFundImg, // replace with: netFundImg
-      // },
       {
         icon: '🌐',
-        name: 'The Bits and Bytes of Computer Networking',
-        issuer: 'Google · Coursera',
+        name: 'The Bits & Bytes of Computer Networking',
+        issuer: 'Google (Coursera)',
         year: 'Sep 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/TAMN3D2EYWGW',
-        image: googleNetImg, // replace with: googleNetImg
+        link: 'https://www.coursera.org/account/accomplishments/verify/S70ZMBZ3MKAK',
+        image: net2Img,
       },
       {
-        icon: '💻',
-        name: 'Introduction to Hardware & Operating Systems',
-        issuer: 'IBM · Coursera',
-        year: 'Sep 2024',
-        link: 'https://www.coursera.org/account/accomplishments/verify/A0MBB0YM4OXE',
-        image: hwOsImg, // replace with: hwOsImg
+        icon: '🌐',
+        name: 'Peer-to-Peer protocols & LANs',
+        issuer: 'University of Colorado (Coursera)',
+        year: 'Oct 2024',
+        link: 'https://www.coursera.org/account/accomplishments/verify/Z3ILWXK06932',
+        image: net3Img,
       },
-      // {
-      //   icon: '💻',
-      //   name: 'Digital Systems: From Logic Gates to Processors',
-      //   issuer: 'Universitat Autònoma de Barcelona',
-      //   year: 'Sep 2024',
-      //   link: 'https://www.coursera.org/account/accomplishments/verify/QTB57ZPT64T9',
-      //   image: digitalImg, // replace with: digitalImg
-      // },
+      {
+        icon: '🌐',
+        name: 'Fundamentals of Network Communication',
+        issuer: 'University of Colorado (Coursera)',
+        year: 'Nov 2024',
+        link: 'https://www.coursera.org/account/accomplishments/verify/VL6FI3KAGGAM',
+        image: net4Img,
+      },
+      {
+        icon: '🌐',
+        name: 'Packet Switching Neetworks & Algorithms',
+        issuer: 'University of Colorado (Coursera)',
+        year: 'Nov 2024',
+        link: 'https://www.coursera.org/account/accomplishments/verify/VYBDJ8QI47VF',
+        image: net5Img,
+      },
+      {
+        icon: '🌐',
+        name: 'TCP/IP & Advanced Topics',
+        issuer: 'University of Colorado (Coursera)',
+        year: 'Nov 2024',
+        link: 'https://www.coursera.org/account/accomplishments/verify/0AAEQ8VH14KS',
+        image: net6Img,
+      },
+      {
+        icon: '🌐',
+        name: 'Digital Systems: From Logic gates to Processors',
+        issuer: 'UAB (Coursera)',
+        year: 'Dec 2024',
+        link: 'https://www.coursera.org/account/accomplishments/verify/4FVPI89UA7DH',
+        image: net7Img,
+      },
+      {
+        icon: '🌐',
+        name: 'Computer Communications',
+        issuer: 'University of Colorado (Coursera)',
+        year: 'Nov 2024',
+        link: 'https://www.coursera.org/account/accomplishments/specialization/XHKULNCUIOCU',
+        image: net8Img,
+      },
     ],
   },
-]
+];
 
 // ── Lightbox ─────────────────────────────────────────────────────────────────
 function Lightbox({ image, name, onClose }) {

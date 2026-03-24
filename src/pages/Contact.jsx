@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { CheckCircle, Github, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import PageTransition from '../components/PageTransition'
 import './Contact.css'
 
@@ -8,29 +9,29 @@ const contactLinks = [
   {
     icon: <Mail size={18}/>,
     label: 'Email',
-    value: 'gurleennn5@gmail.com',
-    href: 'mailto:gurleennn5@gmail.com',
+    value: 'parmandeepkaur44@gmail.com',
+    href: 'mailto:parmandeepkaur44@gmail.com',
     color: 'blue',
   },
   {
     icon: <Linkedin size={18}/>,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/gurleen-kaur5',
-    href: 'https://linkedin.com/in/gurleen-kaur5',
+    value: 'linkedin.com/in/parmandeep-kaur',
+    href: 'https://www.linkedin.com/in/parmandeep-kaur/',
     color: 'blue',
   },
   {
     icon: <Github size={18}/>,
     label: 'GitHub',
-    value: 'github.com/gurleen-kaur5',
-    href: 'https://github.com/gurleen-kaur5',
+    value: 'github.com/ParmandeepKaur',
+    href: 'https://github.com/ParmandeepKaur',
     color: 'violet',
   },
   {
     icon: <Phone size={18}/>,
     label: 'Phone',
-    value: '+91 7986306971',
-    href: 'tel:+917986306971',
+    value: '+91 8968413173',
+    href: 'tel:+8968413173',
     color: 'amber',
   },
   {
@@ -41,21 +42,40 @@ const contactLinks = [
     color: 'amber',
   },
 ]
-
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
   const [sent, setSent] = useState(false)
-
+  const [loading, setLoading] = useState(false)
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    // Wire to a backend POST /api/contact or use EmailJS / Formspree
-    const mailto = `mailto:gurleennn5@gmail.com?subject=${encodeURIComponent(form.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`
-    window.location.href = mailto
+const handleSubmit = (e) => {
+  e.preventDefault()
+  setLoading(true)
+
+  emailjs.send(
+    "service_ntsr3zt",
+    "template_oudvjzp",
+    {
+      name: form.name,
+      email: form.email,
+      subject: form.subject,
+      message: form.message,
+    },
+    "WJsDs1D2yMpSr6sgY"
+  )
+  .then(() => {
+    alert("Message sent successfully! ✅")
     setSent(true)
+    setForm({ name: '', email: '', subject: '', message: '' })
+    setLoading(false)
     setTimeout(() => setSent(false), 4000)
-  }
+  })
+  .catch((error) => {
+    console.error(error)
+    alert("Failed to send message ❌")
+    setLoading(false)
+  })
+}
 
   return (
     <PageTransition>
@@ -81,9 +101,9 @@ export default function Contact() {
             >
               <div className="contact-intro-card card">
                 <div className="contact-intro-top">
-                  <div className="contact-avatar">GK</div>
+                  <div className="contact-avatar">PK</div>
                   <div>
-                    <div className="contact-intro-name">Gurleen Kaur</div>
+                    <div className="contact-intro-name">Parmandeep Kaur</div>
                     <div className="contact-intro-role">Aspiring Software Engineer · ML Enthusiast</div>
                   </div>
                 </div>
@@ -185,17 +205,22 @@ export default function Contact() {
                   />
                 </div>
 
-                <button type="submit" className={`form-submit btn btn-primary ${sent ? 'sent' : ''}`}>
-                  {sent
-                    ? <><CheckCircle size={15}/> Message Sent!</>
-                    : <><Send size={15}/> Send Message</>
-                  }
-                </button>
+                <button
+  type="submit"
+  disabled={loading}
+  className={`form-submit btn btn-primary ${sent ? 'sent' : ''}`}
+>
+  {loading
+    ? "Sending..."
+    : sent
+    ? <><CheckCircle size={15}/> Message Sent!</>
+    : <><Send size={15}/> Send Message</>
+  }
+</button>
 
                 <p className="form-note">
-                  This opens your mail client. Alternatively email me directly at{' '}
-                  <a href="mailto:gurleennn5@gmail.com">gurleennn5@gmail.com</a>
-                </p>
+  I’ll get back to you as soon as possible.
+</p>
               </form>
             </motion.div>
 
