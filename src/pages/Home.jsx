@@ -240,7 +240,7 @@ export default function Home() {
         I'm a third-year CSE student at <strong>Lovely Professional University</strong>, with a focus on software engineering and applied machine learning.
       </p>
       <p className="about-para">
-        I build full-stack applications with the <strong>MERN stack</strong>, specialising in real-time systems — WebRTC, signaling, concurrent backends. On the ML side, I treat models as products: my depression detector delivers <strong>zero false positives</strong> using Random Forest and XGBoost.
+        I build full-stack applications with the <strong>MERN stack</strong>, specialising in real-time systems — WebRTC, signaling, concurrent backends. On the ML side, I treat models as products: my depression detector delivers <strong>zero false positives</strong> using <strong>Random Forest</strong> and <strong>XGBoost</strong>.
       </p>
       <p className="about-para">
         I'm actively looking for <strong>SDE internships</strong> where I can contribute to production systems and ship real features.
