@@ -47,13 +47,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a
-          href="mailto:gurleennn5@gmail.com"
-          className="btn btn-primary nav-cta"
-        >
-          Hire Me
-        </a>
-
         <button className="nav-hamburger" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
