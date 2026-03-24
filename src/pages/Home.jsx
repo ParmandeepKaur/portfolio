@@ -138,10 +138,6 @@ export default function Home() {
                     <span className="info-val">8.27</span>
                   </div>
                   <div className="info-row">
-                    <span className="info-key">DSA Solved</span>
-                    <span className="info-val">250+ Problems</span>
-                  </div>
-                  <div className="info-row">
                     <span className="info-key">Focus</span>
                     <span className="info-val">SDE Roles (primary)</span>
                   </div>
