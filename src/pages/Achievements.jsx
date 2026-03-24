@@ -64,7 +64,7 @@ export default function Achievements() {
 
           {/* 🏅 Badges Section */}
           <div className="badges-section">
-            <h2 className="badges-title">Badges</h2>
+            <h2 className="badges-title">Badges & Cards</h2>
 
             <div className="badges-grid">
               {badges.map((b, i) => (

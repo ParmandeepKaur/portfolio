@@ -31,9 +31,15 @@ const highlights = [
   },
   {
     icon: <Trophy size={20} />,
-    title: 'Devops',
+    title: 'DevOps',
     desc: 'Git · Docker · Maven',
     color: 'amber',
+  },
+  {
+    icon: <Code2 size={20} />,
+    title: 'Visualization Tools',
+    desc: 'Power BI · MS Excel',
+    color: 'blue',
   },
 ]
 
