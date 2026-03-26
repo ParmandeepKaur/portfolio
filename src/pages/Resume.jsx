@@ -41,7 +41,7 @@ const experience = [
     current: true,
   },
   {
-    period: 'June – July 2025',
+    period: 'June 2025 – July 2025',
     role: 'MERN Full Stack Development Programme',
     org: 'GokBoru Tech Pvt Ltd',
     detail:
