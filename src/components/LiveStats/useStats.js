@@ -8,19 +8,19 @@ const LEETCODE_USERNAME = "7VbyC6i50H";
 const CODECHEF_DATA = {
   username: "ideal_sail_60",
   rating: 1500,          // 🔁 your rating
-  problemsSolved: 120,   // 🔁 your solved count
+  problemsSolved: 507,   // 🔁 your solved count
 };
 
 const HACKERRANK_DATA = {
   username: "mandhirkaur733",
-  problemsSolved: 100,   // 🔁 your solved count
-  badges: 5,             // 🔁 number of badges
+  problemsSolved: 107,   // 🔁 your solved count
+  badges: 2,             // 🔁 number of badges
 };
 
 const GFG_DATA = {
   username: "mandhirkp7la",
-  score: 494,     // 🔁 your score
-  rank: 4991,     // 🔁 your rank
+  score: 530,     // 🔁 your score
+  rank: 4542,     // 🔁 your rank
 };
 
 export function useStats() {
