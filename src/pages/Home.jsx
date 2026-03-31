@@ -134,8 +134,8 @@ export default function Home() {
                     <span className="info-val">B.Tech CSE · 2027</span>
                   </div>
                   <div className="info-row">
-                    <span className="info-key">CGPA</span>
-                    <span className="info-val">8.27</span>
+                    <span className="info-key">Strengths</span>
+                    <span className="info-val">DSA | Problem-Solving</span>
                   </div>
                   <div className="info-row">
                     <span className="info-key">Focus</span>
